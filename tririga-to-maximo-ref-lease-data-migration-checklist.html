@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ===================================================================== -->
+<!--  Plumbline — TRIRIGA to Maximo Migration — Lease Data | Plumbline                                                     -->
+<!--                                                                       -->
+<!--  EDITING THIS PAGE                                                    -->
+<!--    * All visible wording is plain HTML below. Change the words         -->
+<!--      between the tags; leave the tags alone.                           -->
+<!--    * Colours, type and spacing live in assets/style.css, section 1.    -->
+<!--    * The <title> and <meta name="description"> below are what Google   -->
+<!--      shows in search results. Keep the title under ~60 characters and  -->
+<!--      the description under ~155.                                       -->
+<!-- ===================================================================== -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Search engines -->
+<title>TRIRIGA to Maximo REF Lease Data Migration Checklist | Plumbline</title>
+<meta name="description" content="A five-phase checklist for moving lease data from TRIRIGA to Maximo Real Estate and Facilities, with the ASC 842 and GASB 87 fields that matter.">
+<link rel="canonical" href="https://plumblinelease.com/tririga-to-maximo-ref-lease-data-migration-checklist.html">
+<meta name="robots" content="index, follow">
+
+<!-- Link previews in Slack, LinkedIn, iMessage and so on -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Plumbline">
+<meta property="og:title" content="TRIRIGA to Maximo REF Lease Data Migration Checklist | Plumbline">
+<meta property="og:description" content="A five-phase checklist for moving lease data from TRIRIGA to Maximo Real Estate and Facilities, with the ASC 842 and GASB 87 fields that matter.">
+<meta property="og:url" content="https://plumblinelease.com/tririga-to-maximo-ref-lease-data-migration-checklist.html">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<!-- Typeface. The only external request this site makes. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "TRIRIGA to Maximo REF lease data migration checklist",
+  "description": "A five-phase checklist for moving lease data from TRIRIGA to Maximo Real Estate and Facilities, with the ASC 842 and GASB 87 fields that matter.",
+  "datePublished": "2026-11-02",
+  "dateModified": "2026-11-02",
+  "mainEntityOfPage": "https://plumblinelease.com/tririga-to-maximo-ref-lease-data-migration-checklist.html",
+  "author": {
+    "@type": "Organization",
+    "name": "Plumbline",
+    "url": "https://plumblinelease.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Plumbline",
+    "url": "https://plumblinelease.com/"
+  }
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===== HEADER — identical on every page. If you change it here, change
+         it on all of them. ================================================= -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><line x1="16" y1="3" x2="16" y2="17" stroke="currentColor" stroke-width="1.7"/><path d="M16 17 L21 22.5 L16 29 L11 22.5 Z" fill="currentColor"/></svg>
+      <span style="font-family:var(--serif);font-size:21px;font-weight:600;
+        letter-spacing:-.02em;color:var(--ink);text-transform:none">Plumbline<span>Lease Data Assurance</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="site-nav" id="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="migration.html">TRIRIGA migration</a>
+        <a href="services.html">Services</a>
+        <a href="approach.html">Approach</a>
+        <a href="insights.html">Insights</a>
+        <a href="about.html">About</a>
+        <a class="cta" href="contact.html">Request a sample</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch theme">☾</button>
+  </div>
+</header>
+
+<main id="main">
+<section class="band first">
+  <div class="wrap">
+    <p class="eyebrow">Insights &middot; Migration</p>
+    <h1>TRIRIGA to Maximo REF lease data migration checklist</h1>
+    <p class="lede">IBM has set the dates. The platform team has a technical runbook. What most
+    programmes still lack is a plan for the lease data itself: the commencement dates, payment
+    schedules and options that drive your ASC 842, GASB 87 or SFFAS 54 numbers. This checklist
+    covers that part.</p>
+    <p class="fine" style="border-top:0;padding-top:0;margin-top:10px">Published November 2026 &middot; About an eight-minute read</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>The dates you are planning against</h2>
+    <p>IBM has announced that support for all versions and releases of IBM TRIRIGA<sup>&reg;</sup>
+    software and the IBM TRIRIGA Application Suite (TAS) ends on <strong>30 September 2027</strong>,
+    and that new software orders, including TRIRIGA SaaS, closed on <strong>28 January 2026</strong>.
+    IBM names IBM Maximo<sup>&reg;</sup> Real Estate and Facilities 9.x, part of IBM Maximo
+    Application Suite (MAS), as the designated upgrade path.<a href="#s1"><sup>[1]</sup></a></p>
+    <p>Two further dates matter. Customers who stay on TRIRIGA or TAS after September 2027 can move
+    to IBM Sustained Support for up to five years, with chargeable Extended Support available for
+    the first 12 months. Customers who trade up to MAS get dual support for up to 19 months beyond
+    the base support end date, and IBM states that dual support under the MAS licence ends on
+    <strong>30 April 2029</strong>.<a href="#s1"><sup>[1]</sup></a><a href="#s2"><sup>[2]</sup></a></p>
+    <p>IBM's documentation is also clear that lease customers may face a longer road than others.
+    Non-lease customers can often upgrade in a single step using the merge capability of the
+    Object Migration tool. For lease customers, IBM says a multi-step upgrade might be required
+    depending on the source application version. Its example: moving from 10.8 needs two steps
+    because of Patch Helper dependencies, first to 11.2, then to 9.2.<a href="#s3"><sup>[3]</sup></a></p>
+    <div class="note">
+      <h4>WHAT THAT MEANS FOR LEASE DATA</h4>
+      <p>Every extra upgrade step is another point where lease records are transformed by
+      workflows rather than read by people. A migration proves that a value moved. It does not
+      prove the value was ever right.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <h2>Phase 1: Before scoping is signed off</h2>
+    <ol>
+      <li><strong>Count the portfolio from the documents, not the system.</strong> Reconcile the
+      number of active lease records against the lease files you actually hold, including
+      amendments, side letters and assignments. Records with no document behind them, and
+      documents with no record, are both findings.</li>
+      <li><strong>Name the reporting standard for each entity.</strong> Corporate entities report
+      under ASC 842, state and local governments under GASB Statement No. 87, and US federal
+      entities under SFFAS 54. The fields that matter, and how they are judged, differ by
+      standard.</li>
+      <li><strong>Agree who owns the lease data.</strong> The integrator owns the platform and the
+      accounting team owns the ledger. Write down, in the statement of work, who is responsible
+      for confirming that each critical value matches the signed lease.</li>
+      <li><strong>Identify your critical fields.</strong> Start with the list in Phase 2 below and
+      add anything your own disclosures or chargebacks depend on.</li>
+      <li><strong>Decide your evidence standard.</strong> For each critical field, decide what an
+      auditor would need to see: the clause, page and line it came from, and who resolved any
+      ambiguity.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Phase 2: The fields that move the numbers</h2>
+    <p>Not every field in a lease record carries the same risk. These are the ones where a single
+    wrong value changes a liability, a schedule or a disclosure.</p>
+    <dl class="rail">
+      <div class="rail-row">
+        <dt>Commencement date</dt>
+        <dd>It sets the start of the payment schedule and the term used to discount the liability.
+        Check it against the lease and any commencement-date memorandum, not against the date the
+        record was created.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>Lease term and options</dt>
+        <dd>Under GASB 87 the lease term is the noncancelable period plus periods covered by
+        extension or termination options that are reasonably certain to be exercised, or not
+        exercised, by the lessee or lessor.<a href="#s4"><sup>[4]</sup></a> ASC 842 requires
+        lessees to disclose the existence and terms of options to extend or terminate, and which
+        are recognised in the right-of-use asset and liability.<a href="#s5"><sup>[5]</sup></a>
+        Every option clause needs to be captured, with its notice period.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>Payment schedule</dt>
+        <dd>Base rent, step increases, abatements and free-rent periods, each tied to the clause
+        that sets it. Escalations stored as a single percentage often hide fixed-step schedules
+        that were never entered.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>Variable payments</dt>
+        <dd>ASC 842 requires disclosure of the basis and terms on which variable lease payments are
+        determined.<a href="#s5"><sup>[5]</sup></a> Capture index-linked rent, percentage rent and
+        operating cost pass-throughs separately from fixed payments.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>Discount rate</dt>
+        <dd>Under GASB 87, payments are discounted at the rate the lessor charges, which may be the
+        rate implicit in the lease; if that cannot be readily determined, the lessee's estimated
+        incremental borrowing rate is used.<a href="#s4"><sup>[4]</sup></a> Record which basis was
+        used for each lease and where the rate came from.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>Residual value guarantees, covenants and restrictions</dt>
+        <dd>ASC 842 calls for disclosure of residual value guarantees and of restrictions or
+        covenants imposed by leases.<a href="#s5"><sup>[5]</sup></a> These usually live in the body
+        of the lease, not in any structured field.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>Subleases and leases not yet commenced</dt>
+        <dd>Both carry their own disclosure requirements under ASC 842.<a href="#s5"><sup>[5]</sup></a>
+        Flag them explicitly so they are not lost in a bulk load.</dd>
+      </div>
+    </dl>
+    <p>A useful test: ASC 842 asks for a weighted-average remaining lease term and a
+    weighted-average discount rate, separately for operating and finance
+    leases.<a href="#s6"><sup>[6]</sup></a> If you can recompute both from the migrated data and
+    get the figures in your last filed statements, the critical fields are probably intact. If you
+    cannot, you know where to look.</p>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <h2>Phase 3: Preparing data for the move</h2>
+    <ol>
+      <li><strong>Take a frozen baseline.</strong> Export every critical field, plus the current
+      lease liability and right-of-use balances, before any upgrade step runs. This is the version
+      everything after it is compared to.</li>
+      <li><strong>Sample against source documents.</strong> Pick a risk-weighted sample, with large
+      leases, recently amended leases and leases with options weighted most heavily, and check each
+      critical value against the signed document.</li>
+      <li><strong>Log every exception with a reason.</strong> For each value that disagrees with the
+      document, record what the document says, where it says it, and how the difference was
+      resolved. This log becomes audit evidence.</li>
+      <li><strong>Fix in the source, once.</strong> Correct confirmed errors before migration so that
+      the corrected value, not the old one, is what loads into Maximo Real Estate and Facilities.</li>
+      <li><strong>Re-read where the sample fails.</strong> If error rates in a segment are high, the
+      honest answer is to re-abstract that segment from the documents rather than extrapolate.</li>
+    </ol>
+    <p>This is the work our <a href="services.html">lease abstraction and lease data assurance
+    services</a> are built around: a field set, a citation for every value, and an exception
+    report for everything a person touched.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Phase 4: Cutover and parallel reporting</h2>
+    <ol>
+      <li><strong>Reconcile record counts and balances</strong> between the frozen baseline and the
+      migrated environment, by entity and by lease classification.</li>
+      <li><strong>Field-compare the critical set.</strong> A count match does not mean the values
+      match. Compare commencement dates, terms, payment schedules and discount rates field by
+      field.</li>
+      <li><strong>Recompute the schedules.</strong> Regenerate amortisation schedules in the new
+      environment for the sample leases and compare them to the baseline. Any difference needs an
+      explanation before go-live.</li>
+      <li><strong>Run at least one close in parallel</strong> where the programme allows, and
+      compare the lease disclosures produced by each system.</li>
+      <li><strong>Hand the evidence to finance.</strong> The baseline, exception log and
+      reconciliations should be filed where the controller and auditors can find them.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <h2>Phase 5: After go-live</h2>
+    <ol>
+      <li><strong>Keep the citation trail with the record.</strong> Store the clause and page
+      reference against each critical field so the next reviewer does not start from zero.</li>
+      <li><strong>Set an intake rule for new leases and amendments.</strong> Every new document
+      gets abstracted to the same evidence standard, before it reaches the ledger.</li>
+      <li><strong>Plan for the first audit cycle.</strong> Expect auditors to sample migrated
+      leases. The question will be simple: show me where this value came from.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Why start now</h2>
+    <p>The September 2027 date is less than a year away, and programmes that need several upgrade
+    steps, parallel reporting and a clean close have less runway than the calendar suggests. A
+    migration is also the one moment an organisation can justify re-reading its leases: the
+    budget is approved and attention is already on the portfolio. After cutover, that window
+    usually closes for years. For more on the dates and how lease data fits a programme, see our
+    <a href="migration.html">IBM TRIRIGA<sup>&reg;</sup> migration page</a>.</p>
+    <h3 id="sources" style="margin-top:36px">Sources</h3>
+    <ol class="fine" style="border-top:0">
+      <li id="s1">IBM Support, <a href="https://www.ibm.com/support/pages/maximo-real-estate-and-facilities-evolution-tririga">Maximo Real Estate and Facilities (The Evolution of TRIRIGA)</a>.</li>
+      <li id="s2">IBM Support, <a href="https://www.ibm.com/support/pages/node/7246638">IBM Maximo Application Suite with IBM TRIRIGA or IBM TRIRIGA Application Suite Dual Support</a>.</li>
+      <li id="s3">IBM Documentation, <a href="https://www.ibm.com/docs/en/masv-and-l/cd?topic=upgrading-from-tririga-maximo-real-estate-facilities">Upgrading from TRIRIGA to Maximo Real Estate and Facilities</a>.</li>
+      <li id="s4">GASB, <a href="https://gasb.org/standards-and-guidance/pronouncements/summary-statement-no-87">Summary of Statement No. 87, Leases</a>, and <a href="https://storage.gasb.org/GASBS87.pdf">Statement No. 87</a>, paragraph 23.</li>
+      <li id="s5">FASB ASC 842-20-50, Lessee disclosure, via <a href="https://viewpoint.pwc.com/dt/us/en/fasb/GAAP/Codification/Codification/Codification/Broad_Transactions/Lease_0/Lessee/842-20-50.html">PwC Viewpoint</a>.</li>
+      <li id="s6">Deloitte DART, <a href="https://dart.deloitte.com/USDART/home/codification/broad-transactions/asc842-10/roadmap-leasing/chapter-15-disclosure/15-2-lessee-disclosure-requirements">15.2 Lessee Disclosure Requirements</a>.</li>
+    </ol>
+    <p class="fine">IBM dates are taken from IBM's published notices as of November 2026. Confirm
+    against IBM's own pages before relying on them for planning. This article is general
+    information, not legal, accounting or tax advice.</p>
+  </div>
+</section>
+
+<section class="band deep">
+  <div class="wrap">
+    <h2 style="max-width:24ch">Test your data before it moves</h2>
+    <p class="lede" style="color:#d6e7f0">Send three leases from the portfolio you are migrating.
+    No charge, no commitment. Pricing for full engagements runs $180&ndash;$320 per lease.</p>
+    <div class="btn-row"><a class="btn light" href="contact.html">Request the sample</a></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER — identical on every page. ============================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p style="font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);margin-bottom:8px">Plumbline</p>
+        <p style="font-size:15px">Lease abstraction and lease data assurance for
+        organisations migrating, auditing or rebuilding a lease portfolio.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="migration.html">TRIRIGA migration</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="insights.html">Insights</a></li>
+<li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <!-- EDIT: your real address and number. -->
+          <li><a href="mailto:info@plumblinelease.com">info@plumblinelease.com</a></li>
+          <li><a href="tel:+16672565961">(667) 256-5961</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>&copy; <span data-year>2026</span> Plumbline.</span>
+      <span>Nothing on this site is legal, accounting or tax advice.</span>
+    </div>
+    <!-- ===================================================================
+         TRADEMARK ATTRIBUTION — required, keep it on every page.
+
+         IBM's published trademark guidance permits text-only references to
+         its product names, and requires an attribution footnote on first
+         use. The non-affiliation sentence is there because the guidance
+         also requires that the nature of the relationship be clear and
+         accurate. Do not remove either sentence, and never use an IBM or
+         TRIRIGA logo anywhere on this site.
+         =================================================================== -->
+    <p style="margin-top:14px;font-size:12.5px;line-height:1.6;color:var(--ink-3);max-width:80ch">
+      IBM<sup>&reg;</sup>, TRIRIGA<sup>&reg;</sup> and Maximo<sup>&reg;</sup> are trademarks of
+      International Business Machines Corporation, registered in many jurisdictions worldwide.
+      Plumbline is an independent practice. It is not affiliated with, authorised by, endorsed
+      by or sponsored by IBM, and references to IBM products describe only the systems our
+      clients use.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
