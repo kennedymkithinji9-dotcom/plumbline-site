@@ -1,0 +1,5 @@
+# Allow every search engine to index the whole site.
+User-agent: *
+Allow: /
+
+Sitemap: https://plumblinelease.com/sitemap.xml

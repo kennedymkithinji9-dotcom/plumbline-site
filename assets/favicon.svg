@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Plumbline">
+  <rect width="32" height="32" rx="6" fill="#1d4f72"/>
+  <line x1="16" y1="5" x2="16" y2="18" stroke="#ffffff" stroke-width="1.6"/>
+  <path d="M16 18 L20.5 22.5 L16 28 L11.5 22.5 Z" fill="#ffffff"/>
+</svg>
