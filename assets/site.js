@@ -111,7 +111,7 @@
         if (status) {
           status.className = "form-status err";
           status.textContent =
-            "This form is not connected yet. Please email us instead — " +
+            "This form is not connected yet. Please email us instead: " +
             "the address is just below.";
         }
         return;
@@ -131,7 +131,7 @@
         if (status) {
           status.className = "form-status ok";
           status.textContent =
-            "Thank you — your message has been sent. We reply within one business day.";
+            "Thank you. Your message has been sent. We reply within one business day.";
         }
       }).catch(function () {
         // Something blocked the request. Submit the form the ordinary way
