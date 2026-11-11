@@ -1,0 +1,4 @@
+# GitHub Pages runs Jekyll on this repository. The site is static HTML;
+# this file only exists to keep internal editing notes off the published site.
+exclude:
+  - README.md
