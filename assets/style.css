@@ -36,7 +36,7 @@
   /* --- colour: text ----------------------------------------------------- */
   --ink:#0e141a;            /* headings and primary text                     */
   --ink-2:#3a4650;          /* body copy                                     */
-  --ink-3:#69757e;          /* captions, labels, muted detail                */
+  --ink-3:#67737c;          /* captions, labels, muted detail. #67737c is just dark enough for 4.5:1 on --paper and --card in light theme. */
 
   /* --- colour: brand and semantics -------------------------------------- */
   --accent:#1d4f72;         /* Plumbline slate blue — links, buttons, rules  */
@@ -116,6 +116,9 @@ h1{font-size:clamp(32px,5vw,54px);line-height:1.06}
 h2{font-size:clamp(25px,3.4vw,38px)}
 h3{font-size:clamp(18px,1.9vw,22px)}
 h4{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.02em}
+/* Size-only classes so heading levels can be raised without changing the look. */
+.heading-card{font-size:clamp(18px,1.9vw,22px)}
+.heading-label{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.02em}
 
 p{margin:0 0 1em;max-width:66ch}
 p:last-child{margin-bottom:0}
@@ -265,12 +268,12 @@ img,svg{max-width:100%;height:auto}
 /* --- notes ------------------------------------------------------------- */
 .note{border-left:4px solid var(--accent);background:var(--accent-soft);
   border-radius:0 10px 10px 0;padding:18px 22px;margin-top:24px;max-width:74ch}
-.note h4{margin-bottom:6px;color:var(--accent)}
+.note h4,.note .heading-label{margin-bottom:6px;color:var(--accent)}
 .note p{max-width:none;font-size:16px}
 .note.true{border-color:var(--true);background:var(--true-soft)}
-.note.true h4{color:var(--true)}
+.note.true h4,.note.true .heading-label{color:var(--true)}
 .note.off{border-color:var(--off);background:var(--off-soft)}
-.note.off h4{color:var(--off)}
+.note.off h4,.note.off .heading-label{color:var(--off)}
 
 /* --- tables ------------------------------------------------------------ */
 .table-scroll{overflow-x:auto;margin-top:24px}
@@ -336,7 +339,7 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
   padding-block:48px 36px;margin-top:0}
 .footer-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr));
   gap:34px}
-.site-footer h4{color:var(--ink-3);font-family:var(--mono);font-size:10.5px;
+.site-footer h4,.site-footer .footer-heading{color:var(--ink-3);font-family:var(--mono);font-size:10.5px;
   letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
 .site-footer ul{list-style:none;margin:0;padding:0}
 .site-footer li{margin-bottom:9px}
