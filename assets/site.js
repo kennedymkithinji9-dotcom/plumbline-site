@@ -1,13 +1,15 @@
 /* ==========================================================================
    PLUMBLINE — site behaviour
    --------------------------------------------------------------------------
-   Four small jobs. No framework, no dependencies, nothing to build.
+   Five small jobs. No framework, no dependencies, nothing to build.
 
      1. Mobile navigation    show and hide the menu below 860px
      2. Theme toggle         light / dark, remembered in this browser
      3. Footer year          so the copyright line never goes stale
      4. Contact form         post to your form service and show the result
                              without the visitor losing the page
+     5. Conversion events    generate_lead after a successful form send,
+                             and email_click on any mailto link
 
    Loaded with `defer` on every page, so it runs after the HTML is parsed.
    ========================================================================== */
@@ -133,14 +135,78 @@
           status.textContent =
             "Thank you. Your message has been sent. We reply within one business day.";
         }
+        // Form stays on this page, so the event can go out at once.
+        sendEvent("generate_lead", {
+          form_id: "contact_form",
+          method: "contact_form",
+          page_path: location.pathname
+        });
+        if (submit) submit.disabled = false;
       }).catch(function () {
         // Something blocked the request. Submit the form the ordinary way
-        // rather than losing what the visitor typed.
-        form.removeAttribute("data-contact");
-        form.submit();
-      }).finally(function () {
-        if (submit) submit.disabled = false;
+        // rather than losing what the visitor typed. Send the lead event
+        // first (beacon, with a short timeout fallback) so it is not lost
+        // when the browser leaves this page.
+        sendEvent("generate_lead", {
+          form_id: "contact_form",
+          method: "contact_form",
+          page_path: location.pathname
+        }, function () {
+          form.removeAttribute("data-contact");
+          form.submit();
+          if (submit) submit.disabled = false;
+        });
       });
     });
   }
+
+  /* ----------------------------------------------------------------------
+     5. CONVERSION EVENTS
+     generate_lead is fired from the contact form handler above, once the
+     service has accepted the message, or just before a normal submit if
+     fetch cannot complete. email_click is fired for any mailto link.
+     Both use the gtag already loaded in the page head. A beacon transport
+     and a short timeout keep the event from being lost if the page unloads.
+     -------------------------------------------------------------------- */
+  function sendEvent(name, params, done) {
+    var finished = false;
+    function finish() {
+      if (finished) return;
+      finished = true;
+      if (typeof done === "function") done();
+    }
+    if (typeof gtag !== "function") {
+      finish();
+      return;
+    }
+    var payload = {
+      transport_type: "beacon",
+      event_callback: finish
+    };
+    if (params) {
+      for (var key in params) {
+        if (Object.prototype.hasOwnProperty.call(params, key)) {
+          payload[key] = params[key];
+        }
+      }
+    }
+    gtag("event", name, payload);
+    setTimeout(finish, 400);
+  }
+
+  document.addEventListener("click", function (e) {
+    var node = e.target;
+    var link = null;
+    while (node && node !== document) {
+      if (node.tagName === "A") {
+        link = node;
+        break;
+      }
+      node = node.parentNode;
+    }
+    if (!link) return;
+    var href = link.getAttribute("href") || "";
+    if (href.slice(0, 7).toLowerCase() !== "mailto:") return;
+    sendEvent("email_click", { link_url: href });
+  });
 })();
