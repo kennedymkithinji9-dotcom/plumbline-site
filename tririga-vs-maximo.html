@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com; connect-src 'self' https://formspree.io https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9E6VT4BXR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L9E6VT4BXR');</script>
+
+<!-- ===================================================================== -->
+<!--  Plumbline — TRIRIGA vs Maximo REF: Lease Data Compared | Plumbline                                                     -->
+<!--                                                                       -->
+<!--  EDITING THIS PAGE                                                    -->
+<!--    * All visible wording is plain HTML below. Change the words         -->
+<!--      between the tags; leave the tags alone.                           -->
+<!--    * Colours, type and spacing live in assets/style.css, section 1.    -->
+<!--    * The <title> and <meta name="description"> below are what Google   -->
+<!--      shows in search results. Keep the title under ~60 characters and  -->
+<!--      the description under ~155.                                       -->
+<!-- ===================================================================== -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Search engines -->
+<title>TRIRIGA vs Maximo REF: Lease Data Compared | Plumbline</title>
+<meta name="description" content="How IBM TRIRIGA and Maximo Real Estate and Facilities compare for lease management, why organisations move, and what lease data to check in a migration.">
+<link rel="canonical" href="https://plumblinelease.com/tririga-vs-maximo">
+<meta name="robots" content="index, follow">
+
+<!-- Link previews in Slack, LinkedIn, iMessage and so on -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Plumbline">
+<meta property="og:title" content="TRIRIGA vs Maximo REF: Lease Data Compared | Plumbline">
+<meta property="og:description" content="How IBM TRIRIGA and Maximo Real Estate and Facilities compare for lease management, why organisations move, and what lease data to check in a migration.">
+<meta property="og:url" content="https://plumblinelease.com/tririga-vs-maximo">
+<meta property="og:image" content="https://plumblinelease.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Plumbline Lease Data">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://plumblinelease.com/assets/og-image.png">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
+
+<!-- Typeface. The only external request this site makes. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "TRIRIGA vs Maximo: what changes for lease data",
+  "description": "How IBM TRIRIGA and Maximo Real Estate and Facilities compare for lease management, why organisations move, and what lease data to check in a migration.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "mainEntityOfPage": "https://plumblinelease.com/tririga-vs-maximo",
+  "author": {
+    "@type": "Organization",
+    "name": "Plumbline",
+    "url": "https://plumblinelease.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Plumbline",
+    "url": "https://plumblinelease.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://plumblinelease.com/assets/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Maximo Real Estate and Facilities the same as TRIRIGA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IBM describes Maximo Real Estate and Facilities as formerly IBM TRIRIGA, and as the evolution of TRIRIGA. It is the designated upgrade path for TRIRIGA customers, now delivered as part of IBM Maximo Application Suite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are organisations moving from TRIRIGA to Maximo REF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IBM has announced that support for all versions and releases of IBM TRIRIGA software and the IBM TRIRIGA Application Suite ends on 30 September 2027, and that new software orders closed on 28 January 2026. IBM names Maximo Real Estate and Facilities 9.x, part of Maximo Application Suite, as the designated upgrade path."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is lease management handled in Maximo REF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IBM's documentation for Maximo Real Estate and Facilities describes lease administration, including tracking of payment streams and invoice validation against contract terms, and lease accounting, including lifecycle data, calculations, journal entries and disclosure reporting in line with GAAP and IFRS. Because Maximo REF is the evolution of TRIRIGA, these are the same domains TRIRIGA lease teams already work in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What lease data should be checked before a TRIRIGA to Maximo REF migration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with the values that move the accounting numbers: commencement and other critical dates, the lease term and options, payment schedules, and the inputs used for ASC 842, GASB 87 or SFFAS 54. A migration proves that a value moved. It does not prove the value was ever right."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Plumbline help with the move?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plumbline re-reads the lease documents and delivers a field set ready to load, a citation for every value, and an exception report for anything that disagrees with the document or needed a judgement. You can send three leases for a free review, with no charge and no commitment."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===== HEADER — identical on every page. If you change it here, change
+         it on all of them. ================================================= -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><line x1="16" y1="3" x2="16" y2="17" stroke="currentColor" stroke-width="1.7"/><path d="M16 17 L21 22.5 L16 29 L11 22.5 Z" fill="currentColor"/></svg>
+      <span style="font-family:var(--serif);font-size:21px;font-weight:600;
+        letter-spacing:-.02em;color:var(--ink);text-transform:none">Plumbline<span>Lease Data Assurance</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="site-nav" id="nav" aria-label="Main">
+        <a href="./">Home</a>
+        <a href="migration">TRIRIGA migration</a>
+        <a href="services">Services</a>
+        <a href="approach">Approach</a>
+        <a href="insights" aria-current="page">Insights</a>
+        <a href="about">About</a>
+        <a class="cta" href="contact">Request a sample</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch theme">☾</button>
+  </div>
+</header>
+
+<main id="main">
+<section class="band first">
+  <div class="wrap">
+    <p class="eyebrow">Insights &middot; Comparison</p>
+    <h1>TRIRIGA vs Maximo: what changes for lease data</h1>
+    <p class="lede">IBM describes Maximo<sup>&reg;</sup> Real Estate and Facilities as the
+    evolution of IBM TRIRIGA<sup>&reg;</sup>, and as the designated upgrade path before
+    TRIRIGA support ends. This page sets out what each system is, how lease, space and
+    facilities data are handled, and what to check when the records move.</p>
+    <p class="fine" style="border-top:0;padding-top:0;margin-top:10px">Published November 2026 &middot; About a seven minute read</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>What each system is</h2>
+    <p>IBM TRIRIGA<sup>&reg;</sup> is the integrated workplace management system many
+    organisations have used for real estate and facilities work, including leases, space
+    and maintenance. IBM now describes IBM Maximo<sup>&reg;</sup> Real Estate and
+    Facilities, often shortened to Maximo REF, as formerly IBM TRIRIGA, and as the
+    evolution of TRIRIGA.<a href="#s1"><sup>[1]</sup></a><a href="#s2"><sup>[2]</sup></a></p>
+    <p>Maximo Real Estate and Facilities 9.x sits inside IBM Maximo Application Suite
+    (MAS) 9.x. IBM's support lifecycle notice names that offering as the designated
+    upgrade path for TRIRIGA.<a href="#s3"><sup>[3]</sup></a></p>
+    <div class="note">
+      <h3 class="heading-label">A USEFUL DISTINCTION</h3>
+      <p>A search for TRIRIGA vs Maximo can mix up two different things. Maximo Real
+      Estate and Facilities is the TRIRIGA successor. IBM Maximo Application Suite is
+      the broader platform that now includes it. This page is about the move from
+      TRIRIGA to Maximo REF.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <h2>Lease management, space and facilities</h2>
+    <p>IBM's documentation for Maximo Real Estate and Facilities describes the same
+    domains TRIRIGA customers already work in, now under the Maximo REF name and on the
+    Maximo Application Suite platform.<a href="#s1"><sup>[1]</sup></a></p>
+    <dl class="rail">
+      <div class="rail-row">
+        <dt>Lease administration</dt>
+        <dd>IBM describes automated tracking of payment streams and invoice validation
+        against contract terms, aimed at streamlining property management and reducing
+        overpayments or penalties.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>Lease accounting</dt>
+        <dd>IBM describes integrated lease lifecycle data management, accounting
+        treatment and calculations, journal entries, and disclosure reporting in line
+        with GAAP and IFRS.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>Space</dt>
+        <dd>Space allocation, moves and audits, utilisation tracking, and space use
+        agreements, used to manage how space is assigned and occupied.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>Facilities</dt>
+        <dd>Facility condition, capital projects, maintenance, reservations and related
+        workplace functions sit alongside the lease and space records on the same
+        platform.</dd>
+      </div>
+    </dl>
+    <p>IBM also publishes a practical difference for the upgrade itself. The application
+    upgrade path depends on whether you use the Lease module, and on your source version.
+    After the move to Maximo REF Platform 9.2, customers who do not use the Lease module
+    can often complete the application upgrade in a single step. Customers who use the
+    Lease module may complete it in one step or in several, depending on the source
+    version and on Patch Helper dependencies.<a href="#s4"><sup>[4]</sup></a> IBM's
+    documentation gives an example already discussed on our
+    <a href="tririga-to-maximo-ref-lease-data-migration-checklist">lease data migration
+    checklist</a>: moving from application 10.8 can take two steps, first to 11.2, then
+    to 9.2.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Why organisations move from TRIRIGA to Maximo REF</h2>
+    <p>This is not a bake off between two unrelated products. IBM has set a support
+    lifecycle for TRIRIGA, and has named Maximo REF as the path forward.</p>
+    <ul>
+      <li>Support for all versions and releases of IBM TRIRIGA software and the IBM
+      TRIRIGA Application Suite (TAS) ends on <strong>30 September 2027</strong>.</li>
+      <li>New software orders, including TRIRIGA SaaS, closed on
+      <strong>28 January 2026</strong>.</li>
+      <li>IBM Maximo Real Estate and Facilities 9.x, part of IBM Maximo Application
+      Suite 9.x, is the designated upgrade path.</li>
+      <li>Customers who stay on TRIRIGA or TAS after September 2027 can move to IBM
+      Sustained Support for up to five years, with chargeable Extended Support available
+      for the first 12 months.</li>
+      <li>Customers who trade up to MAS get dual support for up to 19 months beyond the
+      base support end date. IBM states that dual support under the MAS licence ends on
+      <strong>30 April 2029</strong>.</li>
+    </ul>
+    <p class="fine">Dates per IBM's published support lifecycle notice. Confirm against
+    IBM's own pages before relying on them for planning.<a href="#s3"><sup>[3]</sup></a></p>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <h2>What lease data has to be checked or mapped</h2>
+    <p>A migration proves that a value moved from one field to another. It proves
+    nothing about whether the value was ever right. The records that matter most are
+    the ones that drive ASC 842, GASB 87 or SFFAS 54 numbers, and the operational
+    dates around them.</p>
+    <dl class="rail">
+      <div class="rail-row">
+        <dt>Critical dates</dt>
+        <dd>Commencement, expiry, rent commencement and any other date that starts a
+        payment or a notice window. Check them against the lease and any commencement
+        memorandum, not against the date the record was created.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>Options</dt>
+        <dd>Extension, termination and renewal options, with their notice periods.
+        Under GASB 87 and ASC 842, options that are reasonably certain to be exercised,
+        or not exercised, change the recognised term and the liability.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>Payment schedules</dt>
+        <dd>Base rent, step increases, abatements and free rent periods, each tied to
+        the clause that sets them. Variable payments, including index linked rent and
+        operating cost pass throughs, should be kept distinct from fixed payments.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>GASB 87 and ASC 842 inputs</dt>
+        <dd>The term used to discount the liability, the basis of the discount rate,
+        residual value guarantees, covenants and restrictions, subleases, and leases
+        not yet commenced. These often live in the body of the lease, not in a single
+        structured field.</dd>
+      </div>
+    </dl>
+    <p>Every extra upgrade step is another point where lease records are transformed by
+    workflows rather than read by people. For a plan in five phases, including a frozen
+    baseline and a parallel close, see the
+    <a href="tririga-to-maximo-ref-lease-data-migration-checklist">TRIRIGA to Maximo REF
+    lease data migration checklist</a>.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>How Plumbline helps</h2>
+    <p>We work from the lease documents, not from an export of the old system. The
+    deliverable is built so that what loads into Maximo Real Estate and Facilities has
+    been read, not copied.</p>
+    <div class="grid g3" style="margin-top:32px">
+      <div class="card">
+        <span class="num">DATA READY TO LOAD</span>
+        <h3>A field set for the new system</h3>
+        <p>One row per lease per field, prepared for the target platform, with a
+        citation for every value to clause, page and line.</p>
+      </div>
+      <div class="card">
+        <span class="num">EXCEPTION REPORTS</span>
+        <h3>What disagrees with the document</h3>
+        <p>A second read scoped to exceptions: only the fields that disagree with the
+        lease, each with the clause that contradicts it and why it was held.</p>
+      </div>
+      <div class="card">
+        <span class="num">A FREE REVIEW</span>
+        <h3>Three leases, no charge</h3>
+        <p>Send three leases from the portfolio you are migrating. You receive the
+        field set, the citation list, the exception report and the cover note, with no
+        commitment.</p>
+      </div>
+    </div>
+    <p style="margin-top:22px">Full engagements are published at $180 to $320 per
+    lease. See <a href="services">what we deliver and what moves the number</a>, or
+    <a href="contact">request the sample</a>.</p>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <h2>Questions we are asked</h2>
+    <dl class="rail">
+      <div class="rail-row">
+        <dt>Is Maximo Real Estate and Facilities the same as TRIRIGA?</dt>
+        <dd>IBM describes Maximo Real Estate and Facilities as formerly IBM TRIRIGA, and
+        as the evolution of TRIRIGA. It is the designated upgrade path for TRIRIGA
+        customers, now delivered as part of IBM Maximo Application Suite.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>Why are organisations moving from TRIRIGA to Maximo REF?</dt>
+        <dd>IBM has announced that support for all versions and releases of IBM TRIRIGA
+        software and the IBM TRIRIGA Application Suite ends on 30 September 2027, and
+        that new software orders closed on 28 January 2026. IBM names Maximo Real
+        Estate and Facilities 9.x, part of Maximo Application Suite, as the designated
+        upgrade path.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>How is lease management handled in Maximo REF?</dt>
+        <dd>IBM's documentation for Maximo Real Estate and Facilities describes lease
+        administration, including tracking of payment streams and invoice validation
+        against contract terms, and lease accounting, including lifecycle data,
+        calculations, journal entries and disclosure reporting in line with GAAP and
+        IFRS. Because Maximo REF is the evolution of TRIRIGA, these are the same
+        domains TRIRIGA lease teams already work in.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>What lease data should be checked before a TRIRIGA to Maximo REF migration?</dt>
+        <dd>Start with the values that move the accounting numbers: commencement and
+        other critical dates, the lease term and options, payment schedules, and the
+        inputs used for ASC 842, GASB 87 or SFFAS 54. A migration proves that a value
+        moved. It does not prove the value was ever right.</dd>
+      </div>
+      <div class="rail-row">
+        <dt>How does Plumbline help with the move?</dt>
+        <dd>Plumbline re-reads the lease documents and delivers a field set ready to
+        load, a citation for every value, and an exception report for anything that
+        disagrees with the document or needed a judgement. You can send three leases
+        for a free review, with no charge and no commitment.</dd>
+      </div>
+    </dl>
+    <h3 id="sources" style="margin-top:36px">Sources</h3>
+    <ol class="fine" style="border-top:0">
+      <li id="s1">IBM Documentation, <a href="https://www.ibm.com/docs/en/masv-and-l/maximo-ref/cd?topic=overview-maximo-real-estate-facilities">Maximo Real Estate and Facilities overview</a>.</li>
+      <li id="s2">IBM, <a href="https://www.ibm.com/products/maximo/real-estate-facility-management">Real Estate and Facilities Management</a>, describing Maximo Real Estate and Facilities as the evolution of IBM TRIRIGA.</li>
+      <li id="s3">IBM Support, <a href="https://www.ibm.com/support/pages/maximo-real-estate-and-facilities-evolution-tririga">Maximo Real Estate and Facilities (The Evolution of TRIRIGA)</a>.</li>
+      <li id="s4">IBM Documentation, <a href="https://www.ibm.com/docs/en/masv-and-l/maximo-ref/cd?topic=umrefa-application-upgrade-paths-maximo-real-estate-facilities-platform-92">Application upgrade paths with Maximo Real Estate and Facilities Platform 9.2</a>.</li>
+    </ol>
+    <p class="fine">IBM dates and product descriptions are taken from IBM's published
+    pages as of November 2026. Confirm against IBM's own pages before relying on them
+    for planning. This article is general information, not legal, accounting or tax
+    advice. For more on the dates and how lease data fits a programme, see our
+    <a href="migration">IBM TRIRIGA<sup>&reg;</sup> migration page</a>.</p>
+  </div>
+</section>
+
+<section class="band deep">
+  <div class="wrap">
+    <h2 style="max-width:24ch">Send three leases from the portfolio you are migrating</h2>
+    <p class="lede" style="color:#d6e7f0">No charge, no commitment. You will know within a
+    week whether the data you are about to move is worth re-reading.</p>
+    <div class="btn-row"><a class="btn light" href="contact">Request the sample</a></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER — identical on every page. ============================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p style="font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);margin-bottom:8px">Plumbline</p>
+        <p style="font-size:15px">Lease abstraction and lease data assurance for
+        organisations migrating, auditing or rebuilding a lease portfolio.</p>
+      </div>
+      <div>
+        <h2 class="footer-heading">Pages</h2>
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="migration">TRIRIGA migration</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="approach">Approach</a></li>
+          <li><a href="insights">Insights</a></li>
+<li><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-heading">Get in touch</h2>
+        <ul>
+          <!-- EDIT: your real address and number. -->
+          <li><a href="mailto:info@plumblinelease.com">info@plumblinelease.com</a></li>
+          <li><a href="tel:+16672565961">(667) 256-5961</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>&copy; <span data-year>2026</span> Plumbline.</span>
+      <span>Nothing on this site is legal, accounting or tax advice.</span>
+    </div>
+    <!-- ===================================================================
+         TRADEMARK ATTRIBUTION — required, keep it on every page.
+
+         IBM's published trademark guidance permits text-only references to
+         its product names, and requires an attribution footnote on first
+         use. The non-affiliation sentence is there because the guidance
+         also requires that the nature of the relationship be clear and
+         accurate. Do not remove either sentence, and never use an IBM or
+         TRIRIGA logo anywhere on this site.
+         =================================================================== -->
+    <p style="margin-top:14px;font-size:12.5px;line-height:1.6;color:var(--ink-3);max-width:80ch">
+      IBM<sup>&reg;</sup>, TRIRIGA<sup>&reg;</sup> and Maximo<sup>&reg;</sup> are trademarks of
+      International Business Machines Corporation, registered in many jurisdictions worldwide.
+      Plumbline is an independent practice. It is not affiliated with, authorised by, endorsed
+      by or sponsored by IBM, and references to IBM products describe only the systems our
+      clients use.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
