@@ -50,9 +50,9 @@
   --hold-soft:#f9efda;
 
   /* --- type ------------------------------------------------------------- */
-  --serif:"IBM Plex Serif",Georgia,"Times New Roman",serif;
-  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,Menlo,monospace;
+  --serif:"Spectral",Georgia,"Times New Roman",serif;
+  --sans:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"DM Mono",ui-monospace,"Cascadia Mono",Consolas,Menlo,monospace;
 
   /* --- spacing and measure ---------------------------------------------- */
   --wrap:1140px;            /* maximum content width                         */
