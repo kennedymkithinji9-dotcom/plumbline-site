@@ -118,11 +118,11 @@ Open `assets/style.css`. Everything you are likely to want is in **section 1,
 Design tokens**, at the very top:
 
 ```css
---accent:#1d4f72;      /* the blue used for links, buttons and rules */
---ink:#0e141a;         /* heading and body text */
---paper:#f5f7f8;       /* page background */
---serif:"IBM Plex Serif", ...   /* headings */
---sans:"IBM Plex Sans", ...     /* body text */
+--accent:#2a5d45;      /* the green used for links, buttons and rules */
+--ink:#15181a;         /* heading and body text */
+--paper:#f4f3f0;       /* page background */
+--serif:"Spectral", ...        /* headings */
+--sans:"Archivo", ...          /* body text */
 ```
 
 Change a value there and it changes everywhere on the site. The dark theme is
