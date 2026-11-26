@@ -51,15 +51,43 @@
   --hold-soft:#f9efda;
 
   /* --- type ------------------------------------------------------------- */
-  --serif:"Spectral",Georgia,"Times New Roman",serif;
-  --sans:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --mono:"DM Mono",ui-monospace,"Cascadia Mono",Consolas,Menlo,monospace;
+  --serif:"Spectral","Spectral Fallback",Georgia,"Times New Roman",serif;
+  --sans:"Archivo","Archivo Fallback",Arial,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"DM Mono","DM Mono Fallback",ui-monospace,"Cascadia Mono",Consolas,Menlo,monospace;
 
   /* --- spacing and measure ---------------------------------------------- */
   --wrap:1140px;            /* maximum content width                         */
   --gut:clamp(18px,4vw,40px); /* side gutter — never below 16px             */
   --band:clamp(56px,8vw,104px); /* vertical padding on a full-width band    */
   --radius:12px;
+}
+
+/* Fallback fonts sized to the webfonts they stand in for. This keeps headings
+   and body text from jumping when Spectral, Archivo and DM Mono arrive.
+   Metrics measured in Chromium against Georgia, Arial and the system mono stack. */
+@font-face{
+  font-family:"Spectral Fallback";
+  src:local("Georgia"),local("Times New Roman");
+  size-adjust:104.35%;
+  ascent-override:105.56%;
+  descent-override:46.30%;
+  line-gap-override:0%;
+}
+@font-face{
+  font-family:"Archivo Fallback";
+  src:local("Arial"),local("Helvetica Neue"),local("Helvetica");
+  size-adjust:101.10%;
+  ascent-override:88.24%;
+  descent-override:23.53%;
+  line-gap-override:0%;
+}
+@font-face{
+  font-family:"DM Mono Fallback";
+  src:local("Consolas"),local("Menlo"),local("Courier New");
+  size-adjust:98.43%;
+  ascent-override:96.30%;
+  descent-override:29.63%;
+  line-gap-override:0%;
 }
 
 /* ==========================================================================
